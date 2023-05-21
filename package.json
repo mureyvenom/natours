@@ -37,10 +37,14 @@
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "mongoose": "^7.0.1",
-    "morgan": "^1.10.0",
-    "pm2": "^5.2.2"
+    "morgan": "^1.10.0"
   },
   "scripts": {
-    "prepare": "husky install"
+    "lint": "eslint 'src/**/*.{js,jsx,ts,tsx,json}'",
+    "lint:fix": "eslint --fix 'src/**/*.{js,jsx,ts,tsx,json}'",
+    "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
+    "prepare": "husky install",
+    "dev": "nodemon dist/server.js",
+    "test": "jest"
   }
 }
