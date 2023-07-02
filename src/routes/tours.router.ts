@@ -13,6 +13,6 @@ router.get('/:id', getTour);
 
 router.patch('/:id', updateTour);
 
-router.patch('/:id', deleteTour);
+router.delete('/:id', deleteTour);
 
 export default tours.use('/tours', router);

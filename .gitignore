@@ -2,3 +2,4 @@ node_modules
 *.env
 .eslintcache
 *.config.{js,jsx,ts,tsx,json}
+playground.ts

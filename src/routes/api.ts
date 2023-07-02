@@ -1,11 +1,10 @@
 import express from 'express';
 import toursRouter from './tours.router';
-// import planetsRouter from './planets.router';
-// import launchesRouter from './launches.router';
+import usersRouter from './users.router';
 
 const api = express.Router();
 
 api.use(toursRouter);
-// api.use(launchesRouter);
+api.use(usersRouter);
 
 export default api;
