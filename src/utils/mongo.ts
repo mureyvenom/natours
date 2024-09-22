@@ -11,7 +11,7 @@ mongoose.connection.once('error', (err) => {
   console.log('database error:', err);
 });
 
-const MONGO_URL = `mongodb+srv://${process.env.MONGO_USERNAME}:${process.env.MONGO_PASS}@cluster0.bnsubye.mongodb.net/natours?retryWrites=true&w=majority`;
+const MONGO_URL = `mongodb+srv://${process.env.MONGO_USERNAME}:${process.env.MONGO_PASS}@cluster0.bnsubye.mongodb.net/${process.env.MONGO_DB}?retryWrites=true&w=majority`;
 
 export const mongoConnect = async () => {
   await mongoose.connect(MONGO_URL, {});
